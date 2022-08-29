@@ -13,15 +13,7 @@ public class SteamAudioSDK : ModuleRules
 
         PublicIncludePaths.Add("$(PluginDir)/Source/SteamAudioSDK/include");
 
-        if (Target.Platform == UnrealTargetPlatform.Win32)
-        {
-            PublicAdditionalLibraries.Add("$(PluginDir)/Source/SteamAudioSDK/lib/windows-x86/phonon.lib");
-
-            PublicDelayLoadDLLs.Add("phonon.dll");
-
-            RuntimeDependencies.Add("$(PluginDir)/Source/SteamAudioSDK/lib/windows-x86/phonon.dll");
-        } 
-        else if (Target.Platform == UnrealTargetPlatform.Win64)
+        if (Target.Platform == UnrealTargetPlatform.Win64)
         {
             PublicAdditionalLibraries.Add("$(PluginDir)/Source/SteamAudioSDK/lib/windows-x64/phonon.lib");
 

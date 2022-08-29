@@ -104,7 +104,7 @@ static bool ExportStaticMeshComponent(UStaticMeshComponent* StaticMeshComponent,
     const FPositionVertexBuffer& VertexBuffer = LODModel.VertexBuffers.PositionVertexBuffer;
     for (int i = 0; i < LODModel.GetNumVertices(); ++i)
     {
-        FVector Vertex = VertexBuffer.VertexPosition(i);
+        FVector Vertex = (FVector) VertexBuffer.VertexPosition(i);
         if (bRelativePositions)
         {
             Vertex = StaticMeshComponent->GetComponentTransform().TransformPosition(Vertex);
@@ -287,11 +287,22 @@ static bool ExportBSPGeometry(UWorld* World, ULevel* Level, TArray<IPLVector3>& 
     int InitialNumVertices = Vertices.Num();
     int InitialNumTriangles = Triangles.Num();
 
+    auto WorldModelPoints = World->GetModel()->Points;
+
+    // Gather and convert all world vertices to Steam Audio coords
+    for (int i = 0; i < WorldModelPoints.Num(); i++)
+    {
+        const FVector& WorldVertex = (const FVector&) WorldModelPoints[i];
+        Vertices.Add(SteamAudio::ConvertVector(WorldVertex));
+    }
+
+    /*
     // Gather and convert all world vertices to Steam Audio coords
     for (const FVector& WorldVertex : World->GetModel()->Points)
     {
         Vertices.Add(SteamAudio::ConvertVector(WorldVertex));
     }
+    */
 
     // Gather vertex indices for all faces ("nodes" are faces)
     for (const FBspNode& WorldNode : World->GetModel()->Nodes)

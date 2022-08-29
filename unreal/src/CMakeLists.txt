@@ -27,34 +27,34 @@ add_custom_target(phonon_unreal_setup
 )
 
 add_custom_target(phonon_unreal_win32
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Win32 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Win32-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Win32 Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Win32-Shipping.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Win32 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Win32-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Win32 Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Win32-Shipping.xml ${UBT_ARGS}
     VERBATIM
 )
 
 add_custom_target(phonon_unreal_win64
-    COMMAND     ${Unreal_EXECUTABLE} UE4Editor Win64 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Editor-Win64-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Win64 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Win64-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Win64 Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Win64-Shipping.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealEditor Win64 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Editor-Win64-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Win64 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Win64-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Win64 Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Win64-Shipping.xml ${UBT_ARGS}
     VERBATIM
 )
 
 add_custom_target(phonon_unreal_linux
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Linux Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Linux-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Linux Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Linux-Shipping.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Linux Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Linux-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Linux Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Linux-Shipping.xml ${UBT_ARGS}
     VERBATIM
 )
 
 add_custom_target(phonon_unreal_mac
-    COMMAND     ${Unreal_EXECUTABLE} UE4Editor Mac Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Editor-Mac-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Mac Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Mac-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Mac Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Mac-Shipping.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealEditor Mac Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Editor-Mac-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Mac Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Mac-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Mac Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Mac-Shipping.xml ${UBT_ARGS}
     VERBATIM
 )
 
 add_custom_target(phonon_unreal_android
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Android Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Android-Development.xml ${UBT_ARGS} -architectures=armv7+arm64
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Android Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Android-Shipping.xml ${UBT_ARGS} -architectures=armv7+arm64
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Android Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Android-Development.xml ${UBT_ARGS} -architectures=armv7+arm64
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Android Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProject/HostProject.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProject/Plugins/SteamAudio/SteamAudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudio-UE4Game-Android-Shipping.xml ${UBT_ARGS} -architectures=armv7+arm64
     VERBATIM
 )
 
@@ -110,34 +110,34 @@ add_custom_target(phonon_unreal_fmod_setup
 )
 
 add_custom_target(phonon_unreal_fmod_win32
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Win32 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Win32-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Win32 Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Win32-Shipping.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Win32 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Win32-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Win32 Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Win32-Shipping.xml ${UBT_ARGS}
     VERBATIM
 )
 
 add_custom_target(phonon_unreal_fmod_win64
-    COMMAND     ${Unreal_EXECUTABLE} UE4Editor Win64 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Editor-Win64-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Win64 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Win64-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Win64 Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Win64-Shipping.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealEditor Win64 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Editor-Win64-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Win64 Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Win64-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Win64 Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Win64-Shipping.xml ${UBT_ARGS}
     VERBATIM
 )
 
 add_custom_target(phonon_unreal_fmod_linux
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Linux Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Linux-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Linux Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Linux-Shipping.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Linux Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Linux-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Linux Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Linux-Shipping.xml ${UBT_ARGS}
     VERBATIM
 )
 
 add_custom_target(phonon_unreal_fmod_mac
-    COMMAND     ${Unreal_EXECUTABLE} UE4Editor Mac Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Editor-Mac-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Mac Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Mac-Development.xml ${UBT_ARGS}
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Mac Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Mac-Shipping.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealEditor Mac Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Editor-Mac-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Mac Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Mac-Development.xml ${UBT_ARGS}
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Mac Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Mac-Shipping.xml ${UBT_ARGS}
     VERBATIM
 )
 
 add_custom_target(phonon_unreal_fmod_android
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Android Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Android-Development.xml ${UBT_ARGS} -architectures=armv7+arm64
-    COMMAND     ${Unreal_EXECUTABLE} UE4Game Android Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Android-Shipping.xml ${UBT_ARGS} -architectures=armv7+arm64
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Android Development -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Android-Development.xml ${UBT_ARGS} -architectures=armv7+arm64
+    COMMAND     ${Unreal_EXECUTABLE} UnrealGame Android Shipping -project=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/HostProjectFMOD.uproject -plugin=${CMAKE_CURRENT_BINARY_DIR}/HostProjectFMOD/Plugins/SteamAudioFMODStudio/SteamAudioFMODStudio.uplugin -manifest=${CMAKE_CURRENT_BINARY_DIR}/Manifest-SteamAudioFMODStudio-UE4Game-Android-Shipping.xml ${UBT_ARGS} -architectures=armv7+arm64
     VERBATIM
 )
 
