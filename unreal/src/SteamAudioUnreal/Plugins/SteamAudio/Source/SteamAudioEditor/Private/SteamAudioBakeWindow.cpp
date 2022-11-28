@@ -29,6 +29,7 @@
 #include "SteamAudioSourceComponent.h"
 #include "SteamAudioStaticMeshActor.h"
 #include "TickableNotification.h"
+#include "EditorStyleSet.h"
 
 
 namespace SteamAudio {
