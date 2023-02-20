@@ -4,13 +4,13 @@
 
 import os
 import shutil
-import urllib2
+from urllib.request import urlopen
 import zipfile
 
 version = "4.1.2"
 
 def download_file(url):
-    remote_file = urllib2.urlopen(url)
+    remote_file = urlopen(url)
     with open(os.path.basename(url), "wb") as local_file:
         while True:
             data = remote_file.read(1024)
@@ -18,15 +18,15 @@ def download_file(url):
                 break
             local_file.write(data)
 
-print "Downloading steamaudio_" + version + ".zip..."
+print("Downloading steamaudio_" + version + ".zip...")
 url = "https://github.com/ValveSoftware/steam-audio/releases/download/v" + version + "/steamaudio_" + version + ".zip"
 download_file(url)
 
-print "Extracting steamaudio_" + version + ".zip..."
+print("Extracting steamaudio_" + version + ".zip...")
 with zipfile.ZipFile(os.path.basename(url), "r") as zip:
 	zip.extractall()
 
-print "Creating directories..."
+print("Creating directories...")
 if not os.path.exists("src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x86"):
     os.makedirs("src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x86")
 if not os.path.exists("src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x64"):
@@ -44,9 +44,11 @@ if not os.path.exists("src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudio
 if not os.path.exists("src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/android/x86"):
     os.makedirs("src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/android/x86")
 
-print "Copying files..."
+print("Copying files...")
 shutil.copy("steamaudio/lib/windows-x86/phonon.dll", "src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x86")
+shutil.copy("steamaudio/lib/windows-x86/phonon.lib", "src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x86")
 shutil.copy("steamaudio/lib/windows-x64/phonon.dll", "src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x64")
+shutil.copy("steamaudio/lib/windows-x64/phonon.lib", "src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x64")
 shutil.copy("steamaudio/lib/linux-x86/libphonon.so", "src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/linux-x86")
 shutil.copy("steamaudio/lib/linux-x64/libphonon.so", "src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/linux-x64")
 try:
@@ -61,5 +63,5 @@ shutil.copy("steamaudio/lib/android-x86/libphonon.so", "src/SteamAudioUnreal/Plu
 shutil.copy("steamaudio/lib/windows-x64/TrueAudioNext.dll", "src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x64")
 shutil.copy("steamaudio/lib/windows-x64/GPUUtilities.dll", "src/SteamAudioUnreal/Plugins/SteamAudio/Source/SteamAudioSDK/lib/windows-x64")
 
-print "Cleaning up..."
+print("Cleaning up...")
 shutil.rmtree("steamaudio")

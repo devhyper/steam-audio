@@ -52,7 +52,7 @@ for fileNameNode in fileNameElements:
     relativeFileName = RemovePrefix(sourceFileName, srcRoot).lstrip('/\\')
 
     destFileName = os.path.join(dstRoot, relativeFileName)
-    print '-- Installing from Unreal manifest:' + destFileName
+    print('-- Installing from Unreal manifest:' + destFileName)
     try:
         os.makedirs(os.path.dirname(destFileName))
     except:
